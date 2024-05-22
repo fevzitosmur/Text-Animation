@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body-color">
+    <div class="scrolling-text-container">
+        <p id="scrolling-text" class="scrolling-text">Text Animation</p>
+    </div>
+
+    <div class="user-input">
+        <label for="user-input">Enter Text:</label>
+        <input type="text" id="user-input">
+        <button onclick="stopAnimation()">Stop</button>
+        <button onclick="startAnimation()">Start</button>
+        <button onclick="changeText()">Update</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

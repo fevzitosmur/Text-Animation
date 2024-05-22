@@ -1,0 +1,90 @@
+.scrolling-text-container {
+    height: 90px; /* Örnek bir yükseklik */
+    overflow: hidden; /* İçeriğin sınırları içinde kalmak için */
+    position:relative /* Metni konumlamak için gereklidir */
+   
+}
+
+.scrolling-text {
+    position:fixed; /* Metni konumlamak için */
+    white-space: nowrap; /* Metnin alt alta değil, yan yana olmasını sağlar */
+    animation: scroll 5s linear infinite; /* Animasyonu tanımla */
+    font-size: 24px;
+    text-align: center;
+}
+
+@keyframes scroll {
+    0% {
+        left: 0; /* Başlangıç pozisyonu, metin ekranın solunda */
+    }
+    100% {
+        left: 100%; /* Bitiş pozisyonu, metin ekranın sağında tamamen kayboldu */
+    }
+}
+.body-color{
+   background-color:white;
+}
+.user-input {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.scrolling-text-container {
+    position: absolute;
+}
+
+.scrolling-text {
+    font-size: 24px;
+    color: black;
+    white-space: nowrap;
+    animation: kaydir 5s linear infinite;
+}
+
+@keyframes kaydir {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 100%;
+    }
+}
+.user-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.user-input label {
+    margin-bottom: 10px;
+    font-size: 18px; /* Etiket yazısının boyutunu büyüt */
+    font-weight: bold; /* Etiket yazısını kalın yap */
+    color: #333; /* Etiket yazısının rengini değiştir */
+}
+
+.user-input input[type="text"] {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.user-input button {
+    padding: 8px 15px;
+    width: 100px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-input button:hover {
+    background-color: #45a049;
+}
+
